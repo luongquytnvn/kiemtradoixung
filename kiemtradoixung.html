@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra đối xứng</title>
+</head>
+<body>
+<script>
+    let a = prompt('Hãy nhập vào từ bạn muốn kiểm tra đối xứng:');
+    if (isPalindrome()) {
+        alert('"'+a+'" là từ đối xứng');
+    } else {
+        alert('"'+a+'" không phải là từ đối xứng');
+    }
+    function isPalindrome() {
+        for (i=0;i<a.length-1;i++) {
+            for (j=a.length-1;j>0;j--) {
+                if (i<j) {
+                    if (a.substr(i, i + 1) != a.substr(j, j - 1)) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
